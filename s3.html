@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Icono de la pagina -->
+    <link rel="icon" type="image/png" sizes="" href="./img/favicon-32x32.png">
+    <!-- ****** -->
+    <!-- Descripcion de la pagina -->
+    <meta name="description" content="Curso de Desarrollo Web con HTML, CSS y JS"/>
+    <!-- ****** -->
+    <!-- Viewport de la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ****** -->
+    <!-- Vincular la pagina web con BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- ****** -->
+    <!-- Vincular la pagina web con la hoja de estilos -->
+    <link type="text/css" rel="stylesheet" href="./css/s3.css">
+    <!-- ****** -->
+    <!-- Titulo de la pagina -->
+    <title>Ejercicios UD3-S3</title>
+    <!-- ****** -->
+</head>
+
+<body>
+
+    <header></header>
+    <nav></nav>
+
+    <main>
+        
+        <section class="container-form">
+            <h2>EJERCICIOS UD3-S3</h2>
+            <h5>1. CASO O RETO A RESOLVER</h5>
+            <section class="row">
+                <!-- EJERCICIO 1 -->
+                <section class=" col-12 xform">
+                    <form class="form">
+                    <h6>EJERCICIO 1:</h6>
+                        <p>A un profesor le pagan segun sus horas y una tarifa de pago por horas. Si la cantidad de horas trabajadas es mayor a 40 hrs, la tarifa se incrementa en un 50% para las horas extras. Calcular el salario del profesor dadas las  horas trabajadas y la tarifa.</p>
+                        <label for="horas">Horas trabajadas</label>
+                        <input type="number" id="horas" placeholder="Ingresar tus horas trabajadas" class="form-input" min="1">
+
+                        <label for="tarifaxhora">Tarifa actual</label>
+                        <input type="number" id="tarifaxhora" placeholder="Ingresa la tarifa por horas" class="form-input" min="1">
+
+                        <p id="resultado1"></p>
+
+                        <section id="botoncito">
+                            <input type="button" value="Calcular Salario" class="form-button" id="btnEnviar1">
+                        </section>
+                </form>
+                </section>
+                
+                <!-- EJERCICIO 2 -->
+                <section class="col-12 xform">
+                    <form class="form">
+                        <h6>EJERCICIO 2:</h6>
+                        <p>A un profesor le pagan segun sus horas y una tarifa de pago por horas. Si la cantidad de horas trabajadas es mayor a 40 hrs, la tarifa se incrementa en un 50% para las horas extras. Calcular el salario del profesor dadas las  horas trabajadas y la tarifa.</p>
+                        <label for="radio">Radio de la circunferencia</label>
+                        <input type="number" id="radio" placeholder="Escribir el radio de la circunferencia" class="form-input" min="1">
+
+                        <p id="resultado2"></p>
+                        <p id="resultado2p1"></p>
+                        <p id="resultado2p2"></p>
+                        <section id="botoncito">
+                            <input type="button" value="Calcular Perimetro" class="form-button" id="btnEnviar2">
+                        </section>
+                    </form>
+                </section>
+
+                <!-- EJERCICIO 3 -->
+                <section class="col-12 xform">
+                    <form class="form">
+                        <h6>EJERCICIO 3:</h6>
+                        <p>Dada las horas trabajadas de una persona y la tarifa de pago por hora, calcular su salario y escribirla y los valores porcentuales a su salario en 10%, 30%, 60% y 80%.</p>
+                        <label for="horastrabajadas">Horas trabajadas</label>
+                        <input type="number" id="horastrabajadas" placeholder="Ingrese sus horas realizadas" class="form-input" min="1">
+
+                        <label for="tarifadepagoxhora">Tarifa de pago por hora</label>
+                        <input type="number" id="tarifadepagoxhora" placeholder="Ingrese la tarifa de pago por hora" class="form-input" min="1">
+
+                        <p id="resultado3"></p>
+
+                        <section id="botoncito">
+                            <input type="button" value="Calcular Salario" class="form-button" id="btnEnviar3">
+                        </section>
+
+                        <section id="botoncito">
+                            <input type="button" value="Salario con VP 10%" class="form-button" id="btnEnviar3p1">
+                        </section>
+
+                        <section id="botoncito">
+                            <input type="button" value="Salario con VP 30%" class="form-button" id="btnEnviar3p2">
+                        </section>
+
+                        <section id="botoncito">
+                            <input type="button" value="Salario con VP 60%" class="form-button" id="btnEnviar3p3">
+                        </section>
+
+                        <section id="botoncito">
+                            <input type="button" value="Salario con VP 80%" class="form-button" id="btnEnviar3p4">
+                        </section>
+                    </form>
+                </section>
+
+                <!-- EJERCICIO 4 -->
+                <section class="col-12 xform">
+                    <h6>EJERCICIO 4:</h6>
+                    <p>Un alumno desea saber cual sera su calificacion final en la materia de Algoritmos. Dicha calificacion se compone de los siguientes porcentajes: 55% del promedio de sus tres calificaciones parciales./30% de la calificacion del examen final. / 15% de la calificacion de un trabajo final.</p>
+                    <label for="horastrabajadas">Alumno:</label>
+                    <input type="text" id="alumnoinput" placeholder="Ingrese el nombre del alumno" class="form-input" min="4">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>EVALUACIÓN</th>
+                                <th>PESO</th>
+                                <th>NOTA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Parcial 1</td>
+                                <td rowspan="3" >55%</td>
+                                <td><input type="number" id="cp1" placeholder="cp1" class="form-input" min="0" max="20"></td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 2</td>
+                                <td><input type="number" id="cp2" placeholder="cp2" class="form-input" min="0" max="20"></td>
+                            </tr>
+                            <tr>
+                                <td>Parcial 3</td>
+                                <td><input type="number" id="cp3" placeholder="cp3" class="form-input" min="0" max="20"></td>
+                            </tr>
+                            <tr>
+                                <td>Examen Final</td>
+                                <td>30%</td>
+                                <td><input type="number" id="cef" placeholder="cef" class="form-input" min="0" max="20"></td>
+                            </tr>
+                            <tr>
+                                <td>Trabajo Final</td>
+                                <td>15%</td>
+                                <td><input type="number" id="ctf" placeholder="ctf" class="form-input" min="0" max="20"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2" id="alumnotabla">CALIFICACIÓN FINAL</td>
+                                <td><input type="text" id="cnf" disabled placeholder="NF" class="form-input" min="0" ></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
+                    <section id="botoncito">
+                        <input type="button" value="Calcular CF" class="form-button" id="btnEnviar4">
+                    </section>
+                </section>
+
+                <!-- EJERCICIO 5 -->
+
+                <section class="col-12 xform">
+
+                    <h6>EJERCICIO 5:</h6>
+                    <p>En un hospital existen tres areas: Ginecologia, Pediatria, Traumatologia. El presupuesto anual del hospital se reparte conforme a la tabla indicada. Obtener la cantidad de dinero que recibirá cada área, para monto presupuestal ingresado como argumento.</p>
+                    <label for="horastrabajadas">Monto presupuestal:</label>
+                    <input type="number" id="montopre" placeholder="Ingrese el monto presupuestal" class="form-input" min="0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>AREA</th>
+                                <th>% PRESUP</th>
+                                <th>MONTO DESIGNADO</th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ginecología</td>
+                                <td>40%</td>
+                                <td><input type="text" id="mdg" disabled  placeholder="MDG" class="form-input" min="0" max="20"></td>
+                            </tr>
+                            <tr>
+                                <td>Traumatología</td>
+                                <td>30%</td>
+                                <td><input type="text" id="mdt" disabled  placeholder="MDT" class="form-input" min="0" max="20"></td>
+                            </tr>
+                            <tr>
+                                <td>Pediatría</td>
+                                <td>30%</td>
+                                <td><input type="text" id="mdp" disabled  placeholder="MDP" class="form-input" min="0" max="20"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2" id="alumnotabla">PRESUPUESTO GENERAL</td>
+                                <td><input type="text" id="presugen" disabled placeholder="PG" class="form-input" min="0" ></td>
+                            </tr>
+                            
+                        </tfoot>
+                    </table>
+                    <section id="botoncito">
+                        <input type="button" value="Calcular MP" class="form-button" id="btnEnviar5">
+                    </section>
+                </section>
+
+                <h5>2. ACTIVIDAD ASINCRONICA</h5>
+
+                <!-- EJERCICIO 1 - WORD -->
+
+                <section class="col-12 xform">
+                    <form class="form">
+                        <h6>EJERCICIO 1:</h6>
+                        <p>Crear una aplicación web donde se ingrese un número entero y determine si es PRIMO o no.</p>
+                        <label for="radio">Número entero</label>
+                        <input type="number" id="numPon" placeholder="Escriba un numero" class="form-input" min="1">
+
+                        <p id="resultado1w"></p>
+
+                        <section id="botoncito">
+                            <input type="button" value="Validar" class="form-button" id="btnValidar1w">
+                        </section>
+                    </form>
+                </section>
+            </section>
+        </section>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>
+<script src="./js/s3.js"></script>

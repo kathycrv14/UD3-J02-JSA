@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Icono de la pagina -->
+    <link rel="icon" type="image/png" sizes="" href="./img/favicon-32x32.png">
+    <!-- ****** -->
+    <!-- Descripcion de la pagina -->
+    <meta name="description" content="Curso de Desarrollo Web con HTML, CSS y JS"/>
+    <!-- ****** -->
+    <!-- Viewport de la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ****** -->
+    <!-- Vincular la pagina web con BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- ****** -->
+    <!-- Vincular la pagina web con la hoja de estilos -->
+    <link type="text/css" rel="stylesheet" href="./css/s4.css">
+    <!-- ****** -->
+    <!-- Titulo de la pagina -->
+    <title>Ejercicios UD3-S4</title>
+    <!-- ****** -->
+</head>
+
+<body>
+
+    <header></header>
+    <nav></nav>
+
+    <main>
+
+        <section class="container-form">
+            <h2>EJERCICIOS UD3-S4</h2>
+            <h5>1. ACTIVIDAD ASINCRONICA</h5>
+            <section class="row">
+
+                <!-- EJERCICIO 1 --> 
+                <section class="col-12 xform">
+                    <form class="form">
+                    <h6>EJERCICIO 1:</h6>
+                        <p>Crear una aplicación web donde se ingrese un número entero de 3 cifras y determine lo siguiente: si sus cifras son iguales halle la suma de sus raíces cuadradas, caso contario halle la suma de sus cuadrados.</p>
+                        <label for="numero">Numero entero</label>
+                        <input type="number" id="numero" placeholder="Ingresar un numero de tres cifras" class="form-input" min="100" max="999">
+
+                        <p id="resultado1"></p>
+                        <p id="resultado1p1"></p>
+
+                        <section id="botoncito">
+                            <input type="button" value="Calcular" class="form-button" id="btnCalcular1">
+                        </section>
+                    </form>
+                </section>
+
+                <!-- EJERCICIO 2 -->
+                <section class="col-12 xform">
+                    <form class="form">
+                        <h6>EJERCICIO 2:</h6>
+                            <p>Crear una función que valide una contraseña que cumpla las siguientes características, debe contener minúsculas y al menos 1 mayúscula, debe tener al menos un signo especial: @ o el _ (guion bajo), además debe contener al menos 1 digito numérico y debe tener como mínimo 10 caracteres.</p>
+                            <label for="contrasena">Contraseña</label>
+                            <input type="text" id="contrasena" placeholder="Escribir su contrasena" class="form-input" minlength ="10">
+
+                            <p id="resultado2"></p>
+
+                            <section id="botoncito">
+                                <input type="button" value="Enviar" class="form-button" id="btnEnviar2">
+                            </section>
+                    </form>
+                </section>
+
+                <!-- EJERCICIO 3 -->
+                <section class="col-12 xform">
+                    <form class="form">
+                        <h6>EJERCICIO 3:</h6>
+                            <p>Crear una función que valide el correo electrónico, de tal manera que solo se acepten del dominio certus.edu.pe, así mismo, el nombre del usuario no debe contener espacios en blanco.</p>
+                            <p>Ejemplo: abc.abc@certus.edu.pe</p>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Escribir su correo" class="form-input">
+
+                            <p id="resultado3"></p>
+
+                            <section id="botoncito">
+                                <input type="button" value="Enviar" class="form-button" id="btnEnviar3">
+                            </section>
+                    </form>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>
+<script src="./js/s4.js"></script>
