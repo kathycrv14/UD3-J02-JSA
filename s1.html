@@ -53,20 +53,181 @@
                 <section class=" col-12 xform">
                     <form class="form">
                         <h6>EJERCICIO 2:</h6>
-                        <label for="frase1">Nombre</label>
+                        <p>Dado el siguiente objeto, crear una funcion que verifique si todos los atributos se encuentran llenos. En caso no sea asi, que envie una alerta mostrando un mensaje y los atributos que estan vacíos.Ejemplo: {nombre: "", apellido: "Pacheco", edad: 38, profesion: ""} => Los campos nombre y profesion se encuentran vacios.</p>
+                        <label for="nombre1">Nombre</label>
                         <input type="text" id="nombre1" placeholder="Ingrese su nombre" class="form-input" required>
 
-                        <label for="frase1cap">Apellido</label>
+                        <p id="msj1"></p>
+
+                        <label for="apellido1">Apellido</label>
                         <input type="text" id="apellido1" placeholder="Ingrese su apellido" class="form-input" required>
 
-                        <label for="frase1cap">Edad</label>
-                        <input type="text" id="apellido1" placeholder="Ingrese su edad" class="form-input" required>
+                        <p id="msj2"></p>
 
-                        <label for="frase1cap">Profesion</label>
-                        <input type="text" id="apellido1" placeholder="Ingrese su profesion" class="form-input" required>
+                        <label for="edad1">Edad</label>
+                        <input type="text" id="edad1" placeholder="Ingrese su edad" class="form-input" min="0" required>
+
+                        <p id="msj3"></p>
+
+                        <label for="profesion1">Profesion</label>
+                        <input type="text" id="profesion1" placeholder="Ingrese su profesion" class="form-input" required>
+
+                        <p id="msj4"></p>
+
+                        <p id="msj5"></p>
 
                         <section id="botoncito">
                             <input type="button" value="Enviar" class="form-button" id="btnGenerar2">
+                        </section>
+                    </form>
+                </section>
+
+                <!-- EJERCICIO 3 --> 
+                <section class=" col-12 xform">
+                    <form class="form">
+                        <h6>EJERCICIO 3:</h6>
+                        <p>Para el ejercicio anterior, crear una funcion que dados los datos pendientes, lance un PROMPT para que el usuario complete los datos faltantes. Debe verificar que el dato ingresado no este vacio y que corresponda al tipo de dato.</p>
+                        <label for="nombre2">Nombre</label>
+                        <input type="text" id="nombre2" placeholder="Ingrese su nombre" class="form-input" required>
+
+                        <p id="msj11"></p>
+
+                        <label for="apellido2">Apellido</label>
+                        <input type="text" id="apellido2" placeholder="Ingrese su apellido" class="form-input" required>
+
+                        <p id="msj12"></p>
+
+                        <label for="edad2">Edad</label>
+                        <input type="number" id="edad2" placeholder="Ingrese su edad" class="form-input" min="0" required>
+
+                        <p id="msj13"></p>
+
+                        <label for="profesion2">Profesion</label>
+                        <input type="text" id="profesion2" placeholder="Ingrese su profesion" class="form-input" required>
+
+                        <p id="msj14"></p>
+
+                        <p id="msj15"></p>
+
+                        <section id="botoncito">
+                            <input type="button" value="Completar datos" class="form-button" id="btnGenerar3">
+                        </section>
+                        <section id="botoncito">
+                            <input type="button" value="Enviar" class="form-button" id="btnGenerar3p1">
+                        </section>
+                    </form>
+                </section>
+
+                <!-- EJERCICIO 4 --> 
+                <section class=" col-12 xform">
+                    <form class="form">
+                        <h6>EJERCICIO 4:</h6>
+                        <p>Te enviaron una base de datos de usuarios:</p>
+                        <p>let users = [<br>
+                            {nombre: "", apellido: "Pacheco", edad: 38, profesion: ""},<br>
+                            {nombre: "Andrea", apellido: "", edad: 25, profesion: "profesor"},<br>
+                            {nombre: "Julia", apellido: "", edad: 32, profesion: "musico"},<br>
+                            {nombre: "", apellido: "Martinez", edad: 29, profesion: "programador"},<br>
+                            {nombre: "Roberto", apellido: "Mattos", edad: 40, profesion: ""},<br>
+                            {nombre: "Mercedes", apellido: "Sanchez", edad: 35, profesion: "veterinario"},<br>]</p>
+                            
+                        <p>Te piden que utilizando las funciones de los ejercicios anteriores, evalues que usuarios tienen datos pendientes y en caso no existan, solicitar el ingreso de los datos a traves del prompt para completarlos.</p>
+
+                        <!-- USUARIO 1 --> 
+                        <p>USER 1</p>
+                        <label for="nombre3">Nombre</label>
+                        <input type="text" id="nombre3" placeholder="Ingrese su nombre" class="form-input" required value="">
+
+                        <label for="apellido3">Apellido</label>
+                        <input type="text" id="apellido3" placeholder="Ingrese su apellido" class="form-input" required value="Pacheco">
+
+                        <label for="edad3">Edad</label>
+                        <input type="number" id="edad3" placeholder="Ingrese su edad" class="form-input" min="0" required value="38">
+
+                        <label for="profesion3">Profesion</label>
+                        <input type="text" id="profesion3" placeholder="Ingrese su profesion" class="form-input" required value=""><br>
+
+                        <!-- USUARIO 2 --> 
+                        <br><p>USER 2</p>
+                        <label for="nombre3p1">Nombre</label>
+                        <input type="text" id="nombre3p1" placeholder="Ingrese su nombre" class="form-input" required value="Andrea">
+
+                        <label for="apellido3p1">Apellido</label>
+                        <input type="text" id="apellido3p1" placeholder="Ingrese su apellido" class="form-input" required value="">
+
+                        <label for="edad3p1">Edad</label>
+                        <input type="number" id="edad3p1" placeholder="Ingrese su edad" class="form-input" min="0" required value="25">
+
+                        <label for="profesion3p1">Profesion</label>
+                        <input type="text" id="profesion3p1" placeholder="Ingrese su profesion" class="form-input" required value="Profesor"><br>
+
+                        <!-- USUARIO 3 --> 
+                        <br><p>USER 3</p>
+                        <label for="nombre3p2">Nombre</label>
+                        <input type="text" id="nombre3p2" placeholder="Ingrese su nombre" class="form-input" required value="Julia">
+
+                        <label for="apellido3p2">Apellido</label>
+                        <input type="text" id="apellido3p2" placeholder="Ingrese su apellido" class="form-input" required value="">
+
+                        <label for="edad3p2">Edad</label>
+                        <input type="number" id="edad3p2" placeholder="Ingrese su edad" class="form-input" min="0" required value="32">
+
+                        <label for="profesion3p2">Profesion</label>
+                        <input type="text" id="profesion3p2" placeholder="Ingrese su profesion" class="form-input" required value="Musico"><br>
+
+                        <!-- USUARIO 4 --> 
+                        <br><p>USER 4</p>
+                        <label for="nombre3p3">Nombre</label>
+                        <input type="text" id="nombre3p3" placeholder="Ingrese su nombre" class="form-input" required value="">
+
+                        <label for="apellido3p3">Apellido</label>
+                        <input type="text" id="apellido3p3" placeholder="Ingrese su apellido" class="form-input" required value="Martinez">
+
+                        <label for="edad3p3">Edad</label>
+                        <input type="number" id="edad3p3" placeholder="Ingrese su edad" class="form-input" min="0" required value="29">
+
+                        <label for="profesion3p3">Profesion</label>
+                        <input type="text" id="profesion3p3" placeholder="Ingrese su profesion" class="form-input" required>
+                        <p id="msj24" value="Programador"></p>
+
+                        <!-- USUARIO 5 --> 
+                        <br><p>USER 5</p>
+                        <label for="nombre3p4">Nombre</label>
+                        <input type="text" id="nombre3p4" placeholder="Ingrese su nombre" class="form-input" required value="Roberto">
+
+                        <label for="apellido3p4">Apellido</label>
+                        <input type="text" id="apellido3p4" placeholder="Ingrese su apellido" class="form-input" required value="Mattos">
+
+                        <label for="edad3p4">Edad</label>
+                        <input type="number" id="edad3p4" placeholder="Ingrese su edad" class="form-input" min="0" required value="40">
+
+                        <label for="profesion3p4">Profesion</label>
+                        <input type="text" id="profesion3p4" placeholder="Ingrese su profesion" class="form-input" required>
+                        <p id="msj24" value=""></p>
+
+                        <!-- USUARIO 6 --> 
+                        <br><p>USER 6</p>
+                        <label for="nombre3p5">Nombre</label>
+                        <input type="text" id="nombre3p5" placeholder="Ingrese su nombre" class="form-input" required value="Mercedes">
+
+                        <label for="apellido3p5">Apellido</label>
+                        <input type="text" id="apellido3p5" placeholder="Ingrese su apellido" class="form-input" required value="Sanchez">
+
+                        <label for="edad3p5">Edad</label>
+                        <input type="number" id="edad3p5" placeholder="Ingrese su edad" class="form-input" min="0" required value="35">
+
+                        <label for="profesion3p5">Profesion</label>
+                        <input type="text" id="profesion3p5" placeholder="Ingrese su profesion" class="form-input" required>
+                        <p id="msj24" value="Veterinario"></p>
+
+                        <p id="msj40"></p>
+
+                        <section id="botoncito">
+                            <input type="button" value="Completar datos" class="form-button" id="btnGenerar4">
+                        </section>
+
+                        <section id="botoncito">
+                            <input type="button" value="Enviar" class="form-button" id="btnGenerar4p1">
                         </section>
                     </form>
                 </section>
