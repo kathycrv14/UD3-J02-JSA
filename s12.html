@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Icono de la pagina -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <!-- ****** -->
+    <!-- Descripcion de la pagina -->
+    <meta name="description" content="Curso de Desarrollo Web con HTML, CSS y JS"/>
+    <!-- ****** -->
+    <!-- Viewport de la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ****** -->
+    <!-- Vincular la pagina web con BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- ****** -->
+    <!--Vincular la pagina web con la libreria de jQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- Vincular la pagina web con la hoja de estilos -->
+    <link type="text/css" rel="stylesheet" href="css/s12.css">
+    <!-- ****** -->
+    <!-- Titulo de la pagina -->
+    <title>TRABAJO GRUPAL UD3-S11 & S12</title>
+    <!-- ****** -->
+
+</head>
+<body>
+    <main class="container-xxl">
+        <section class="fondoGeneral">
+            <!-- FILA N* 1 -->
+            <section class="row">
+                <!-- DATOS USUARIOS -->
+                <section class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 columnaCol p-3">
+                    <p class="titulo">DATOS DE USUARIO</p>
+                    <section class="bordeDatos">
+                        <!-- ID -->
+                        <section>
+                            <label for="">ID</label>
+                            <input type="number" id="txtid" value="1" class="form-input">
+                        </section>
+                        <!-- NOMBRE -->
+                        <section>
+                            <label for="">Nombre</label>
+                            <input type="text" id="txtnombre" class="form-input">
+                        </section>
+        
+                        <!-- APELLIDO -->
+                        <section>
+                            <label for="">Apellido</label>
+                            <input type="text" id="txtapellido" class="form-input">    
+                        </section>
+        
+                        <!-- EDAD -->
+                        <section>
+                            <label for="">Edad</label>
+                            <input type="number" id="txtedad" class="form-input"> 
+                        </section>
+        
+                        <!-- PROFESION -->
+                        <section>
+                            <label for="">Profesion</label>
+                            <input type="text" id="txtprofesion" class="form-input"> 
+                            
+                        </section>                        
+                    </section>
+
+                </section>
+
+                <!-- BOTONES -->
+                <section class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 columnaCol p-3">
+                    <p class="titulo">ACCIONES</p>
+                    <section class="row bordeDatos">
+                        <section class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 bordeDatos2">
+                            <input type="button" value="Crear" id="btncrear" class="form-button">
+                        </section>
+                        <section class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 bordeDatos2">
+                            <input type="button" value="Update" id="btnupdate" class="form-button">
+                        </section>
+                        <section class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 bordeDatos2">
+                            <input type="button" value="Delete" id="btndelete" class="form-button">
+                        </section>
+                        <section class="row">
+                            <section class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6col-6 bordeDatos2">
+                                <input type="button" value="Filtrar" id="btnfiltrar" class="form-button">
+                            </section>
+                            <section class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 bordeDatos2">
+                                <input type="date" name="" id="date" class="form-button">
+                            </section>                            
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- FILA N* 2 -->
+            <!-- TABLA -->
+            <section class="row">
+                <section class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 columnaCol p-3">
+                    <p class="titulo">DATOS INGRESADOS</p>
+                    <section class="bordeDatos3">
+                        <section id="root"></section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
+<script src="js/s12.js"></script>
+
