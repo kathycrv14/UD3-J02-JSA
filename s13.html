@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Icono de la pagina -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <!-- ****** -->
+    <!-- Descripcion de la pagina -->
+    <meta name="description" content="Curso de Desarrollo Web con HTML, CSS y JS"/>
+    <!-- ****** -->
+    <!-- Viewport de la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ****** -->
+    <!-- Vincular la pagina web con BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- ****** -->
+    <!--Vincular la pagina web con la libreria de jQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- ****** -->
+    <!--Vincular la pagina web con AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- ****** -->
+    <!-- Vincular la pagina web con la hoja de estilos -->
+    <link type="text/css" rel="stylesheet" href="css/s13.css">
+    <!-- ****** -->
+    <!-- Titulo de la pagina -->
+    <title>Ejercicios UD3-S13</title>
+    <!-- ****** -->
+
+</head>
+<body>
+    <main>
+        <section class="container-form">
+            <h2>EJERCICIOS UD3-S13</h2>
+            <section class="row">
+
+            <h5>1. ACTIVIDAD ASINCRONICA</h5>    
+
+                <!-- EJERCICIO 1 " -->
+                <section class="col-12 xform" ng-app="myApp">
+                    <section ng-controller="myCtrl" class="form">
+                    <h6>EJERCICIO 1:</h6>
+                        <p>La empresa “MULTIPLAN” dedicada al alquiler de vehículos, emite una factura de acuerdo al servicio prestado a sus clientes por la distancia recorrida en el auto alquilado. Si la distancia recorrida no es mayor a los 300 km., se cobra una tarifa fija de S/.250, si la distancia recorrida es mayor a 300 km. y hasta 1000 km. se cobra la tarifa fija más el exceso de kilómetros a razón de S/. 30 por km. y si la distancia recorrida es mayor a 1000 km., la compañía cobra la tarifa fija más los kilómetros recorridos entre 300 hasta 1000 a razón de S/. 30, más S/.20 por Kilómetro de exceso en distancias mayores de 1000 km. Además, por promoción otorga un descuento del 10% del importe a pagar, por importes mayores a 500 soles.</p>
+
+                        <label for="distanciaRecorrida">Distancia recorrida</label>
+                        <input type="text" id="distanciaRecorrida" placeholder="Ingrese la distancia recorrida de su vehiculo" class="form-input" ng-model="distanciaRecorridaInput">
+
+                        <label for="tarifaCobrada">Importe a pagar</label>
+                        <input type="text" id="tarifaCobrada" placeholder="" class="form-input" ng-model="importeAPagar() | currency" disabled>
+
+                        <label for="descuento">Descuento</label>
+                        <input type="text" id="descuento" placeholder="" class="form-input" ng-model="descuento() | currency"  disabled>
+
+                        <label for="descuento">TOTAL</label>
+                        <input type="text" id="descuento" placeholder="" class="form-input" ng-model="totalAPagar() | currency"  disabled>
+
+                        
+                    <section id="resultado"></section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>    
+</body>
+</html>
+<script src="js/s13.js"></script>
+
