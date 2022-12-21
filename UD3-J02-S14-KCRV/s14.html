@@ -26,14 +26,14 @@
     <link type="text/css" rel="stylesheet" href="./css/s14.css">
     <!-- ****** -->
     <!-- Titulo de la pagina -->
-    <title>Ejercicios UD3-S13</title>
+    <title>Ejercicios UD3-S14</title>
     <!-- ****** -->
 
 </head>
 <body>
     <main>
         <section class="container-form">
-            <h2>EJERCICIOS UD3-S13</h2>
+            <h2>EJERCICIOS UD3-S14</h2>
             <section class="row">
 
             <h5>1. ACTIVIDAD ASINCRONICA</h5>    
@@ -42,22 +42,66 @@
                 <section class="col-12 xform" ng-app="myApp">
                     <section ng-controller="myCtrl" class="form">
                     <h6>EJERCICIO 1:</h6>
-                        <p>La empresa “MULTIPLAN” dedicada al alquiler de vehículos, emite una factura de acuerdo al servicio prestado a sus clientes por la distancia recorrida en el auto alquilado. Si la distancia recorrida no es mayor a los 300 km., se cobra una tarifa fija de S/.250, si la distancia recorrida es mayor a 300 km. y hasta 1000 km. se cobra la tarifa fija más el exceso de kilómetros a razón de S/. 30 por km. y si la distancia recorrida es mayor a 1000 km., la compañía cobra la tarifa fija más los kilómetros recorridos entre 300 hasta 1000 a razón de S/. 30, más S/.20 por Kilómetro de exceso en distancias mayores de 1000 km. Además, por promoción otorga un descuento del 10% del importe a pagar, por importes mayores a 500 soles.</p>
+                        <p>Se lee por teclado el código del empleado, número de horas trabajadas, tarifa por hora. Calcular el salario básico, considerando la siguiente tabla de descuento.</p>
 
-                        <label for="distanciaRecorrida">Distancia recorrida</label>
-                        <input type="text" id="distanciaRecorrida" placeholder="Ingrese la distancia recorrida de su vehiculo" class="form-input" ng-model="distanciaRecorridaInput">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>SUELDO BRUTO</th>
+                                    <th>DECUENTO (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Menor 500</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Entre 501 y 1000</td>
+                                    <td>2</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>Entre 1001 y 4000</td>
+                                    <td>8</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>Entre 4001 y 8000</td>
+                                    <td>15</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>Entre 8001 y 10000</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>Mayor 10000</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                        <label for="tarifaCobrada">Importe a pagar</label>
-                        <input type="text" id="tarifaCobrada" placeholder="" class="form-input" ng-model="importeAPagar() | currency" disabled>
+                        <p>Crear una aplicación web que permita calcular el básico, descuento y salario neto.</p>
+
+                        <label for="codigo">Codigo</label>
+                        <input type="text" id="codigo" placeholder="Ingrese su codigo" class="form-input">
+
+                        <label for="horasTrabajadass">Horas trabajadas</label>
+                        <input type="text" id="horasTrabajadas" placeholder="Ingrese sus horas trabajas" class="form-input" ng-model="horasTrabajadas">
+
+                        <label for="tarifaPorHora">Tarifa por hora</label>
+                        <input type="text" id="tarifaPorHora" placeholder="Ingrese su tarifa por hora" class="form-input" ng-model="tarifaPorHora">
+
+                        <label for="sueldoBasico">Sueldo basico</label>
+                        <input type="text" id="sueldoBasico" placeholder="" class="form-input" ng-model="sueldoBasico() | currency" disabled>
 
                         <label for="descuento">Descuento</label>
-                        <input type="text" id="descuento" placeholder="" class="form-input" ng-model="descuento() | currency"  disabled>
+                        <input type="text" id="descuento" placeholder="" class="form-input" ng-model="descuento() | currency" disabled>
 
-                        <label for="descuento">TOTAL</label>
-                        <input type="text" id="descuento" placeholder="" class="form-input" ng-model="totalAPagar() | currency"  disabled>
-
+                        <label for="salarioNeto">Salario Neto</label>
+                        <input type="text" id="salarioNeto" placeholder="" class="form-input" ng-model="salarioNeto() | currency" disabled>
                         
-                    <section id="resultado"></section>
                     </section>
                 </section>
             </section>
