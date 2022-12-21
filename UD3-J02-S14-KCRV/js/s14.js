@@ -1,52 +1,71 @@
-//La empresa “MULTIPLAN” dedicada al alquiler de vehículos, emite una factura de acuerdo al servicio prestado a sus clientes por la distancia recorrida en el auto alquilado. Si la distancia recorrida no es mayor a los 300 km., se cobra una tarifa fija de S/.250, si la distancia recorrida es mayor a 300 km. y hasta 1000 km. se cobra la tarifa fija más el exceso de kilómetros a razón de S/. 30 por km. y si la distancia recorrida es mayor a 1000 km., la compañía cobra la tarifa fija más los kilómetros recorridos entre 300 hasta 1000 a razón de S/. 30, más S/.20 por Kilómetro de exceso en distancias mayores de 1000 km. Además, por promoción otorga un descuento del 10% del importe a pagar, por importes mayores a 500 soles.
+// Se lee por teclado el código del empleado, número de horas trabajadas, tarifa por hora. Calcular el salario básico, considerando la siguiente tabla de descuento.
+//Crear una aplicación web que permita calcular el básico, descuento y salario neto.
 
 let app = angular.module("myApp",[]);
 
 app.controller("myCtrl",function ($scope) {
 
-//VARIABLES CON $SCOPE
-
-  $scope.tarifaFija = 250;
-  $scope.tarifaExceso = 30;
-  $scope.tarifaExceso1000 = 20;
-
-  $scope.limiteExceso = 300;
-  $scope.limiteExceso1000 = 1000;
-
-  $scope.limiteDescuento = 500;
-
-  $scope.porcentajeDescuento = 0.1;
-
 // FUNCION
 
-$scope.importeAPagar = function (){
 
-  let distanciaRecorridaInput = $scope.distanciaRecorridaInput;
-    
-  if (distanciaRecorridaInput <= $scope.limiteExceso) {
-    return $scope.tarifaFija;
-  }else if (distanciaRecorridaInput <= $scope.limiteExceso1000) {
-      return $scope.tarifaFija + ($scope.tarifaExceso * (distanciaRecorridaInput - $scope.limiteExceso));
-  }else {
-    return $scope.tarifaFija + ($scope.tarifaExceso * ($scope.limiteExceso1000 - $scope.limiteExceso)) + ($scope.tarifaExceso1000 * (distanciaRecorridaInput - $scope.limiteExceso1000));
+
+
+$scope.sueldoBasico = function () {
+
+  let horasTrabajadas = $scope.horasTrabajadas;
+  let tarifaPorHora = $scope.tarifaPorHora;
+
+  let sueldoB = horasTrabajadas * tarifaPorHora;
+
+  return sueldoB;
+};
+
+$scope.descuento = function () {
+
+  let sueldoBasico = $scope.sueldoBasico();
+
+  $scope.sbum = 500;
+  $scope.sbdois = 1000;
+  $scope.sbtres = 4000;
+  $scope.sbquatro = 8000;
+  $scope.sbcinco = 10000;
+
+  $scope.dum = 0;
+  $scope.ddois = 0.02;
+  $scope.dtres = 0.08;
+  $scope.dquatro = 0.15;
+  $scope.dcinco = 0.21;
+  $scope.dseis = 0.30;
+
+
+  if(sueldoBasico <= $scope.sbum){
+    let descuento = sueldoBasico * $scope.dum;
+    return descuento;
+  }else if (sueldoBasico > $scope.sbum && sueldoBasico >= $scope.sbdois){
+    let descuento = sueldoBasico * $scope.ddois;
+    return descuento;
+  }else if (sueldoBasico > $scope.sbdois && sueldoBasico >= $scope.sbtres){
+    let descuento = sueldoBasico * $scope.dtres;
+    return descuento;
+  }else if (sueldoBasico > $scope.sbtres && sueldoBasico >= $scope.sbquatro){
+    let descuento = sueldoBasico * $scope.dquatro;
+    return descuento;
+  }else if (sueldoBasico > $scope.sbquatro && sueldoBasico >= $scope.sbcinco){
+    let descuento = sueldoBasico * $scope.dcinco;
+    return descuento;
+  }else{
+    let descuento = sueldoBasico * $scope.dseis;
+    return descuento;
   }
 };
 
-// FUNCION
-$scope.descuento = function() {
+$scope.salarioNeto = function () {
+  let salarioNeto = $scope.sueldoBasico() - $scope.descuento();
 
-  let importeAPagar = $scope.importeAPagar();
+  return salarioNeto;
 
-  if (importeAPagar > $scope.limiteDescuento) {
-    return importeAPagar * $scope.porcentajeDescuento;
-  }else {
-    return 0;
-    }
-};
+}
 
-// FUNCION
-$scope.totalAPagar = function() {
-  return $scope.importeAPagar() - $scope.descuento();
-  };
+
 });
 
