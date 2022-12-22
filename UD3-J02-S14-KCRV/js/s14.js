@@ -41,16 +41,16 @@ $scope.descuento = function () {
   if(sueldoBasico <= $scope.sbum){
     let descuento = sueldoBasico * $scope.dum;
     return descuento;
-  }else if (sueldoBasico > $scope.sbum && sueldoBasico >= $scope.sbdois){
+  }else if (sueldoBasico > $scope.sbum && sueldoBasico <= $scope.sbdois){
     let descuento = sueldoBasico * $scope.ddois;
     return descuento;
-  }else if (sueldoBasico > $scope.sbdois && sueldoBasico >= $scope.sbtres){
+  }else if (sueldoBasico > $scope.sbdois && sueldoBasico <= $scope.sbtres){
     let descuento = sueldoBasico * $scope.dtres;
     return descuento;
-  }else if (sueldoBasico > $scope.sbtres && sueldoBasico >= $scope.sbquatro){
+  }else if (sueldoBasico > $scope.sbtres && sueldoBasico <= $scope.sbquatro){
     let descuento = sueldoBasico * $scope.dquatro;
     return descuento;
-  }else if (sueldoBasico > $scope.sbquatro && sueldoBasico >= $scope.sbcinco){
+  }else if (sueldoBasico > $scope.sbquatro && sueldoBasico <= $scope.sbcinco){
     let descuento = sueldoBasico * $scope.dcinco;
     return descuento;
   }else{
