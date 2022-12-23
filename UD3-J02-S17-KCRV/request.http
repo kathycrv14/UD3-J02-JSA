@@ -1,0 +1,28 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Katherine Reyes",
+    "age": 30,
+    "email": "kathy@gmail.com"
+}
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/63a5d80309227999c1503f56 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/63a5d90d6ff74cebb3e90c16 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Katherine Reyes Vega",
+    "age": 30,
+    "email": "kathy@gmail.com"
+}
+
+###
+DELETE http://localhost:9000/api/users/63a5d80309227999c1503f56 HTTP/1.1
